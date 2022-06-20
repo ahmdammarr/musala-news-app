@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
+import { useTheme, setTheme } from "shared/storeSlices/themeSlice"
 import { EThemes } from "../enums"
-import { setTheme, useTheme } from "../storeSlices/themeSlice/themeSlice"
 
 export const useChangeTheme = ()=>{
 const dispatch = useDispatch()

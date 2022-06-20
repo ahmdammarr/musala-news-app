@@ -1,7 +1,7 @@
 import { Text, TextProps } from "react-native";
 import React from "react";
-import { useThemed } from "../../hooks/useThemed";
-import { TThemedProps } from "../../types/TThemedProps.type";
+import { useThemed } from "shared/hooks";
+import { TThemedProps } from "shared/types";
 
 type TThemedText = TThemedProps & TextProps;
 const Themed = (props: TThemedText) => {

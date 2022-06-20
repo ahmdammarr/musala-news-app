@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
-import {TRootState} from '../../types/TRootState.type'
 import {useColorScheme as _useColorScheme } from 'react-native';
-import {EReducers} from '../../enums/EReducers.enum'
-import { useAppSelector } from "../../../store/hooks/useAppSelector";
+import { EReducers } from "shared/enums";
+import { TRootState } from "shared/types";
+import { useAppSelector } from "store/hooks";
 
 const defultMood = _useColorScheme()
 
