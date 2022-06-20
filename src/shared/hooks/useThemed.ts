@@ -1,6 +1,6 @@
-import { colors } from "../../assets/colors/colors";
-import { EThemes } from "../enums/EThemes.enum";
-import { useTheme } from "../storeSlices/themeSlice/themeSlice";
+import { colors } from "assets/colors";
+import { EThemes } from "shared/enums";
+import { useTheme } from "shared/storeSlices/themeSlice";
 
 export const useThemed = (
   props: { light?: string; dark?: string },
