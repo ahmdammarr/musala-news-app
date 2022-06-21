@@ -1,1 +1,1 @@
-export { getItem, removeItem, setItem } from "./localStorage";
+export { getItem, removeItem, setItem, removeAll } from "./localStorage";
