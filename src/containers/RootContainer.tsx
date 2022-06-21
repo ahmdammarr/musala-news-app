@@ -1,8 +1,9 @@
 import React from "react";
-import { ReduxContainer } from "./src/containers/ReduxContainer";
+
+import { ReduxContainer } from "containers";
 import { AppContainer } from "containers";
 
-const App = () => {
+const RootContainer = () => {
   return (
     <ReduxContainer>
       <AppContainer />
@@ -10,4 +11,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default RootContainer;
