@@ -10,10 +10,10 @@ import { LanguageSwitcher } from "../components/LanguageSwitcher";
 export const Settings = () => {
   const { top } = useSafeAreaInsets();
   return (
-    <ThemedView style={[styles.container, { top }]}>
-      <TitleText title={translate("settings.title")} style={styles.title}/>
+    <ThemedView style={[styles.container, { paddingTop: top }]}>
+      <TitleText title={translate("settings.title")} style={styles.title} />
       <ThemeSwitcher />
-      <LanguageSwitcher/>
+      <LanguageSwitcher />
     </ThemedView>
   );
 };
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
-  title:{
-    alignSelf:'flex-start'
-  }
+  title: {
+    alignSelf: "flex-start",
+  },
 });
