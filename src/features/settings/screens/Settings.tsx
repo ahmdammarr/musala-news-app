@@ -7,19 +7,15 @@ import { ThemedText } from "shared/components/ThemedText";
 import { ThemedView } from "shared/components/ThemedView";
 import { TitleText } from "shared/components/TitleText";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 export const Settings = () => {
   const { changeTheme, isDarkTheme } = useChangeTheme();
   const { top } = useSafeAreaInsets();
   return (
     <ThemedView style={[styles.container, { top }]}>
-      <TitleText title={translate("settings.title")} style={styles.title} />
-      <ThemedText>{translate("settings.theme.theme")}</ThemedText>
-      <Switch
-        value={isDarkTheme}
-        onChange={() => changeTheme()}
-        thumbColor={"greens"}
-      />
+      <TitleText title={translate("settings.title")} />
+      <ThemeSwitcher />
     </ThemedView>
   );
 };
@@ -27,8 +23,6 @@ export const Settings = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  title: {
-    marginTop: 10,
-  },
+    padding: 16,
+  }
 });

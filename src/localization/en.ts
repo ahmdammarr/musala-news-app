@@ -2,7 +2,7 @@ const en = {
   settings:{
     title:'Settings',
     theme: {
-      theme: 'Theme'
+      theme: 'Dark Theme'
     },
     languages: {
       title: 'Languages',

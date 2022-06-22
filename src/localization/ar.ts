@@ -2,7 +2,7 @@ const ar = {
     settings:{
       title:'الضبط',
       theme: {
-        theme: 'الالوان'
+        theme: 'وضع الليل'
       },
       languages: {
         title: 'اللغات',
