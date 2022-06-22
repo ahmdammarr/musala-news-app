@@ -3,8 +3,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useThemed } from "shared/hooks";
 import { TThemedProps } from "shared/types";
 import { EBottomTabsRoutes } from "shared/enums/EBottomTabsRoutes.enum";
-import Test from "shared/components/Test/Test";
 import { NewsIcon } from "shared/components/Svgs";
+import { Settings } from "features/settings/screens";
+import { GearIcon } from "shared/components/Svgs/GearIcon";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -14,7 +15,7 @@ export const BottomTabNavigator = ({ light, dark }: TThemedProps) => {
     headerShown: false,
     tabBarShowLabel: false,
     tabBarStyle: {
-      paddingVertical:30,
+      paddingVertical: 30,
       backgroundColor: iconBackgroundColor,
     },
     tabBarActiveTintColor: iconBackgroundColor,
@@ -24,10 +25,19 @@ export const BottomTabNavigator = ({ light, dark }: TThemedProps) => {
     <BottomTab.Navigator screenOptions={screenOptions}>
       <BottomTab.Screen
         name={EBottomTabsRoutes.news}
-        component={Test}
+        component={Settings}
         options={{
           tabBarIcon: ({ focused }) => {
             return <NewsIcon isFocused={focused} />;
+          },
+        }}
+      />
+      <BottomTab.Screen
+        name={EBottomTabsRoutes.settings}
+        component={Settings}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return <GearIcon isFocused={focused} />;
           },
         }}
       />
