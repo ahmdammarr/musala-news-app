@@ -1,0 +1,1 @@
+export { NewsIcon } from "./NewsIcon";
