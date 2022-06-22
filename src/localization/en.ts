@@ -1,11 +1,14 @@
 const en = {
-  theme: {
-    theme: 'Theme'
-  },
-  languages: {
-    title: 'Languages',
-    english: 'English',
-    arabic: 'Arabic',
+  settings:{
+    title:'Settings',
+    theme: {
+      theme: 'Theme'
+    },
+    languages: {
+      title: 'Languages',
+      english: 'English',
+      arabic: 'Arabic',
+    }
   }
 };
 

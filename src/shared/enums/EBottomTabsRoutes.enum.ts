@@ -1,3 +1,4 @@
 export enum EBottomTabsRoutes{
-    news = 'News'
+    news = 'News',
+    settings =  'Settings'
 }

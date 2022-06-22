@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useThemed } from "shared/hooks";
 import { TThemedProps } from "shared/types";
 import { EBottomTabsRoutes } from "shared/enums/EBottomTabsRoutes.enum";
-import Test from "shared/components/Test/Test";
 import { NewsIcon } from "shared/components/Svgs";
+import { Settings } from "features/settings/screens"
 
 const BottomTab = createBottomTabNavigator();
 
@@ -23,8 +23,17 @@ export const BottomTabNavigator = ({ light, dark }: TThemedProps) => {
   return (
     <BottomTab.Navigator screenOptions={screenOptions}>
       <BottomTab.Screen
+        name={EBottomTabsRoutes.settings}
+        component={Settings}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return <NewsIcon isFocused={focused} />;
+          },
+        }}
+      />
+        <BottomTab.Screen
         name={EBottomTabsRoutes.news}
-        component={Test}
+        component={Settings}
         options={{
           tabBarIcon: ({ focused }) => {
             return <NewsIcon isFocused={focused} />;

@@ -1,11 +1,14 @@
 const ar = {
-    theme: {
-      theme: 'الالوان'
-    },
-    languages: {
-      title: 'اللغات',
-      english: 'الانجليزية',
-      arabic: 'العربية',
+    settings:{
+      title:'الضبط',
+      theme: {
+        theme: 'الالوان'
+      },
+      languages: {
+        title: 'اللغات',
+        english: 'الانجليزية',
+        arabic: 'العربية',
+      }
     }
 };
 
