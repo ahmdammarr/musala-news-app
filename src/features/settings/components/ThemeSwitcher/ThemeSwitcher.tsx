@@ -9,14 +9,9 @@ export const ThemeSwitcher = () => {
   const { changeTheme, isDarkTheme } = useChangeTheme();
   return (
     <View
-      style={{
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginTop: 10,
-      }}
+      style={styles.container}
     >
-      <ThemedText>{translate("settings.theme.theme")}</ThemedText>
+      <ThemedText style={styles.title} >{translate("settings.theme.theme")}</ThemedText>
       <Switch
         value={isDarkTheme}
         onChange={() => changeTheme()}
@@ -26,4 +21,12 @@ export const ThemeSwitcher = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container:{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginTop: 10,
+      },
+      title:{fontWeight:'600'}
+});

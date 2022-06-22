@@ -5,9 +5,9 @@ const en = {
       theme: 'Dark Theme'
     },
     languages: {
-      title: 'Languages',
+      title: 'Language',
       english: 'English',
-      arabic: 'Arabic',
+      arabic: 'العربية',
     }
   }
 };

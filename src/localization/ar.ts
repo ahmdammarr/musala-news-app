@@ -5,8 +5,8 @@ const ar = {
         theme: 'وضع الليل'
       },
       languages: {
-        title: 'اللغات',
-        english: 'الانجليزية',
+        title: 'اللغة',
+        english: 'English',
         arabic: 'العربية',
       }
     }

@@ -1,21 +1,19 @@
-import { changeLanguage, translate } from "localization";
+import { translate } from "localization";
 import React from "react";
-import { StyleSheet, Switch } from "react-native";
-//import { ELanguages } from "shared/enums";
-import { useChangeTheme } from "shared/hooks/useChangeTheme";
-import { ThemedText } from "shared/components/ThemedText";
+import { StyleSheet } from "react-native";
 import { ThemedView } from "shared/components/ThemedView";
 import { TitleText } from "shared/components/TitleText";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ThemeSwitcher } from "../components/ThemeSwitcher";
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
 
 export const Settings = () => {
-  const { changeTheme, isDarkTheme } = useChangeTheme();
   const { top } = useSafeAreaInsets();
   return (
     <ThemedView style={[styles.container, { top }]}>
-      <TitleText title={translate("settings.title")} />
+      <TitleText title={translate("settings.title")} style={styles.title}/>
       <ThemeSwitcher />
+      <LanguageSwitcher/>
     </ThemedView>
   );
 };
@@ -24,5 +22,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+  },
+  title:{
+    alignSelf:'flex-start'
   }
 });
