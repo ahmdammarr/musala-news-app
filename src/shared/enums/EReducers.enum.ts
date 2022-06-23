@@ -1,3 +1,4 @@
 export enum EReducers {
-    theme = 'theme'
+    theme = 'theme',
+    news = 'news'
 }

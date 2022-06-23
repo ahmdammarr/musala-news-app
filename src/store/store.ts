@@ -1,4 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit';
+import { newsReducer } from 'features/news/store/NewsSlice';
 
 import { EReducers } from '../shared/enums';
 import { themeReducer } from '../shared/storeSlices/themeSlice/themeSlice';
@@ -7,6 +8,7 @@ import { themeReducer } from '../shared/storeSlices/themeSlice/themeSlice';
 export const store = configureStore({
   reducer: {
     [EReducers.theme]: themeReducer,
+    [EReducers.news]:  newsReducer
 
   },
 });
