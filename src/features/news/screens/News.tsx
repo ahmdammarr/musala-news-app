@@ -4,8 +4,10 @@ import { ThemedText } from "shared/components/ThemedText";
 import { ThemedView } from "shared/components/ThemedView";
 import { AnimatedView } from "shared/components/AnimatedView";
 import { animations } from "assets/animations";
+import { useGetNews } from "../hooks/useGetNews";
 
 export const News = () => {
+  const { data } = useGetNews()
   return (
     <ThemedView style={styles.container}>
       <ThemedText>News</ThemedText>

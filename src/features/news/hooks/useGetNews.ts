@@ -15,7 +15,7 @@ export const useGetNews = () => {
       dispatch(
         setNews({
           news: [],
-          status: ENewsState.loading,
+          status: ENewsState.failed,
         })
       );
       if (news)
