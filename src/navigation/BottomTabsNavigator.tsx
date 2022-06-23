@@ -6,6 +6,7 @@ import { EBottomTabsRoutes } from "shared/enums/EBottomTabsRoutes.enum";
 import { NewsIcon } from "shared/components/Svgs";
 import { Settings } from "features/settings/screens";
 import { GearIcon } from "shared/components/Svgs/GearIcon";
+import { NewsStackScreens } from "features/news";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -25,7 +26,7 @@ export const BottomTabNavigator = ({ light, dark }: TThemedProps) => {
     <BottomTab.Navigator screenOptions={screenOptions}>
       <BottomTab.Screen
         name={EBottomTabsRoutes.news}
-        component={Settings}
+        component={NewsStackScreens}
         options={{
           tabBarIcon: ({ focused }) => {
             return <NewsIcon isFocused={focused} />;
