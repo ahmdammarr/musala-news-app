@@ -5,15 +5,25 @@ import { ThemedView } from "shared/components/ThemedView";
 import { AnimatedView } from "shared/components/AnimatedView";
 import { animations } from "assets/animations";
 import { useGetNews } from "../hooks/useGetNews";
+import { NewsItem } from "../components/newsItem";
 
 export const News = () => {
-  const { data } = useGetNews()
+  const { data } = useGetNews();
   return (
     <ThemedView style={styles.container}>
-      <ThemedText>News</ThemedText>
-      <AnimatedView 
+      <ThemedView
+        style={{
+          width: "100%",
+          height: "100%",
+          justifyContent: "center",
+          paddingHorizontal: 10,
+        }}
+      >
+        <NewsItem />
+      </ThemedView>
+      {/* <AnimatedView 
       containerStyle={{width:120, height:120}}
-      animation={animations.loadingAnimation} />
+      animation={animations.loadingAnimation} /> */}
     </ThemedView>
   );
 };
