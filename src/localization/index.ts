@@ -29,5 +29,5 @@ export function translate(name: string, params = {}) {
 }
 
 export const getCurrentLanguage = () => i18n.currentLocale();
-export const isArabic =  i18n.currentLocale() === ELanguages.ar
+export const isArabic = i18n.currentLocale() === ELanguages.ar
 export default i18n;

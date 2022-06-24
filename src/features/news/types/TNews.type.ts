@@ -3,5 +3,6 @@ export type TNews = {
     title:string
     description:string
     image:string
-    published_at:Date
+    published_at: string
+    url:string
 }

@@ -12,7 +12,9 @@ const ar = {
   
     },
     news:{
-      search:'ابحث عن الاخبار'
+      search:'ابحث عن الاخبار',
+      fullArticle:'المقالة كاملة',
+      clickHere:'اضغط هنا'
     }
 };
 
