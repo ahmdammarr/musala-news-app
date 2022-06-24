@@ -5,4 +5,4 @@ export type { TTabIcons } from "./TTabIcons.type";
 export type { TTitleText } from "./TTitleText.type";
 export type { TAnimatedView } from "./TAnimatedView.type";
 export type { TNewsState } from "./TNewsState.type";
-export type { TLoader } from "./TLoader.type";
+export type { TViewStyle } from "./TViewStyle.type";

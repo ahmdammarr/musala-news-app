@@ -1,6 +1,6 @@
 import { StyleProp, ViewStyle } from "react-native"
 
-export type TLoader =  {
+export type TViewStyle =  {
     style : StyleProp<ViewStyle>
   }
   

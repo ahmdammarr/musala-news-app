@@ -1,0 +1,1 @@
+export {ErrorAnimated} from './ErrorAnimated'
