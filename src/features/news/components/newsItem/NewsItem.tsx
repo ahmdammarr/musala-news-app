@@ -16,7 +16,7 @@ const width = scaleWidth(360);
 const height = scaleHeight(380);
 
 export const NewsItem = (props: TNews & TThemedProps) => {
-  const { description, urlToImage, title, dark, light } = props;
+  const { description, image, title, dark, light } = props;
   const themedColor = useThemed({ light, dark }, "secondaryBackGround");
   return (
     <TouchableOpacity
@@ -24,7 +24,7 @@ export const NewsItem = (props: TNews & TThemedProps) => {
       style={[styles.container, { borderColor: themedColor }]}
     >
       <Image
-        source={{ uri: urlToImage }}
+        source={{ uri: image }}
         resizeMode="cover"
         style={[styles.cover, { backgroundColor: themedColor }]}
       />
