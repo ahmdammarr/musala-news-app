@@ -1,4 +1,4 @@
-import { getAllNewsApi } from "api/getAllNews/getAllNewsApi";
+import { getNewsApi } from "api/getNews";
 import { useEffect } from "react";
 import { ENewsState } from "shared/enums";
 import { useAppDispatch } from "store/hooks";
@@ -9,7 +9,7 @@ export const useGetNews = () => {
   const data = useNews();
 
   const getNews = async () => {
-    const { error, news } = await getAllNewsApi(0);
+    const { error, news } = await getNewsApi(0);
     if (error)
       dispatch(
         setNews({
@@ -28,7 +28,7 @@ export const useGetNews = () => {
   };
 
   const fetchMoreNews = async (page:number) => {
-    const { error, news } = await getAllNewsApi(page);
+    const { error, news } = await getNewsApi(page);
     if (error)
       dispatch(
         setNews({

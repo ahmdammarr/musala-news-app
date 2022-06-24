@@ -6,3 +6,9 @@ export type TNewsState = {
     page:0
     status: ENewsState
 }
+
+export type TSearchNewsState = {
+    searchNews: TNews[]
+    page:0
+    status: ENewsState
+}

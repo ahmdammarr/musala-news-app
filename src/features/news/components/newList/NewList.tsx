@@ -3,6 +3,7 @@ import React from "react";
 import { NewsItem } from "../newsItem";
 import { TNews } from "features/news/types";
 import { Loader } from "shared/components/Loader";
+import { scaleHeight } from "utils/scaling/scaling";
 
 export const NewList = ({
   data,
@@ -18,6 +19,7 @@ export const NewList = ({
       data={data}
       refreshing={refreshing}
       onRefresh={onLoadMore}
+      contentContainerStyle={{marginTop:scaleHeight(10)}}
       refreshControl={
         <RefreshControl
           refreshing={refreshing}

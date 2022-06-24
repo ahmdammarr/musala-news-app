@@ -1,7 +1,8 @@
-import {  EThemes } from "../enums";
-import { TNewsState } from "./TNewsState.type";
+import {  EStores, EThemes } from "../enums";
+import { TNewsState,TSearchNewsState } from "./TNewsState.type";
 
 export type TRootState = {
-    theme: EThemes,
-    news: TNewsState
+    [EStores.theme]: EThemes,
+    [EStores.news]: TNewsState,
+    [EStores.searchNews]: TSearchNewsState,
 };

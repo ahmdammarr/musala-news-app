@@ -1,0 +1,1 @@
+export {getNewsApi} from './getNewsApi'

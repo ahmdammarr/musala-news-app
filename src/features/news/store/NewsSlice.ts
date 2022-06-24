@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { ENewsState, EReducers } from "shared/enums";
+import { ENewsState, EStores } from "shared/enums";
 import { TNewsState, TRootState } from "shared/types";
 import { useAppSelector } from "store/hooks";
 
@@ -10,7 +10,7 @@ const initialState: TNewsState = {
 };
 
 export const newsSlice = createSlice({
-  name: EReducers.news,
+  name: EStores.news,
   initialState ,
   reducers: {
     setNews: (state, action)=> state = action.payload
@@ -22,7 +22,7 @@ export const newsSlice = createSlice({
 export const { setNews } = newsSlice.actions
 
 const newsReducer = newsSlice.reducer;
-const selectNews = (state:Pick<TRootState,'news'>) => state
+const selectNews = (state:Pick<TRootState,EStores.news>) => state
 const useNews = () => useAppSelector(selectNews);
 
 
