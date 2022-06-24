@@ -2,16 +2,21 @@ import axios from "axios";
 import { to } from "await-to-js";
 import { getCurrentLanguage } from "localization";
 import {API_TOKEN} from '@env'
+import { baseURI } from "api/baseURI";
+import { ELanguages } from "shared/enums";
 
-export const getAllNewsApi = async () => {
+
+export const getAllNewsApi = async (offset:number) => {
   const selectedLang = getCurrentLanguage()
+  const country = selectedLang === ELanguages.ar?'eg':'us'
   const params = {
-    'apiKey': API_TOKEN,
-    'q':'all',
+    'access_key': API_TOKEN,
+    'countries':country,
     'language': selectedLang,
+    "offset":offset
 };
   const [error, response] = await to(
-    axios.get("https://newsapi.org/v2/everything",{params})
+    axios.get(baseURI,{params})
   );
-  return { error, news:response?.data };
+  return { error, news:response?.data?.data };
 };

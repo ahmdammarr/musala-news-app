@@ -4,12 +4,12 @@ import { ENewsState } from "shared/enums";
 import { useAppDispatch } from "store/hooks";
 import { setNews, useNews } from "../store/NewsSlice";
 
-export const useGetNews = () => {
+export const useGetNews = (page:number) => {
   const dispatch = useAppDispatch();
   const data = useNews();
 
   const getNews = async () => {
-    const { error, news } = await getAllNewsApi();
+    const { error, news } = await getAllNewsApi(page);
     if (error)
       dispatch(
         setNews({
@@ -18,12 +18,14 @@ export const useGetNews = () => {
         })
       );
     if (news)
-      dispatch(
+ {
+  console.log('news',news)
+  dispatch(
         setNews({
-          news: news?.articles || [],
+          news: [...news, news],
           status: ENewsState.done,
         })
-      );
+      );}
   };
   useEffect(() => {
     getNews();
