@@ -1,21 +1,19 @@
 import { StyleSheet } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { ThemedView } from "shared/components/ThemedView";
 import { AnimatedView } from "shared/components/AnimatedView";
 import { animations } from "assets/animations";
 import { useGetNews } from "../hooks/useGetNews";
 import { NewList } from "../components/newList";
 import { ENewsState } from "shared/enums";
+import { Loader } from "shared/components/Loader";
+import { scaleHeight, scaleWidth } from "utils/scaling/scaling";
 
 export const News = () => {
-  const { data } = useGetNews();
+  const [offSetPage, setOffSetPage] = useState(0);
+  const { data } = useGetNews(offSetPage);
   const screenContent = {
-    [ENewsState.loading]: (
-      <AnimatedView
-        containerStyle={{ width: 120, height: 120 }}
-        animation={animations.loadingAnimation}
-      />
-    ),
+    [ENewsState.loading]: <Loader style={styles.loader}/>,
     [ENewsState.failed]: (
       <AnimatedView
         containerStyle={{ width: 120, height: 120 }}
@@ -34,6 +32,12 @@ export const News = () => {
 
 const styles = StyleSheet.create({
   container: {
-     alignItems: "center",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
+  loader:{
+    height: scaleHeight(125),
+    width: scaleWidth(150)
+  }
 });
