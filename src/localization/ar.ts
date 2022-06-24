@@ -8,7 +8,11 @@ const ar = {
         title: 'اللغة',
         english: 'English',
         arabic: 'العربية',
-      }
+      },
+  
+    },
+    news:{
+      search:'ابحث عن الاخبار'
     }
 };
 

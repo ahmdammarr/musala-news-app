@@ -9,6 +9,9 @@ const en = {
       english: 'English',
       arabic: 'العربية',
     }
+  },
+  news:{
+    search:'Search News'
   }
 };
 

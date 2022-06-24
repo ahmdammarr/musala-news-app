@@ -1,0 +1,1 @@
+export const  baseURI = 'http://api.mediastack.com/v1/news'

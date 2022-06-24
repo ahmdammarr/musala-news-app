@@ -5,7 +5,6 @@ import { AppContainer } from "containers";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const RootContainer = () => {
-
   return (
     <ReduxContainer>
       <SafeAreaProvider>

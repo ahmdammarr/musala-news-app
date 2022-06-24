@@ -1,12 +1,16 @@
 import {configureStore} from '@reduxjs/toolkit';
+import { newsReducer } from 'features/news/store/NewsSlice';
+import { searchNewsReducer } from 'features/news/store/SearchResultsSlice';
 
-import { EReducers } from '../shared/enums';
+import { EStores } from '../shared/enums';
 import { themeReducer } from '../shared/storeSlices/themeSlice/themeSlice';
 
 
 export const store = configureStore({
   reducer: {
-    [EReducers.theme]: themeReducer,
+    [EStores.theme]: themeReducer,
+    [EStores.news]:  newsReducer,
+    [EStores.searchNews]:  searchNewsReducer
 
   },
 });
