@@ -10,6 +10,7 @@ import {
   scaleHeight,
   scaleWidth,
 } from "utils/scaling/scaling";
+import { images } from "assets/images";
 
 const Radius = scale(10);
 const width = scaleWidth(360);
@@ -18,13 +19,14 @@ const height = scaleHeight(380);
 export const NewsItem = (props: TNews & TThemedProps) => {
   const { description, image, title, dark, light } = props;
   const themedColor = useThemed({ light, dark }, "secondaryBackGround");
+   const imagesSource = image?{ uri: image }: images.defaultImage
   return (
     <TouchableOpacity
       onPress={() => console.log("hello")}
       style={[styles.container, { borderColor: themedColor }]}
     >
       <Image
-        source={{ uri: image }}
+        source={imagesSource}
         resizeMode="cover"
         style={[styles.cover, { backgroundColor: themedColor }]}
       />
