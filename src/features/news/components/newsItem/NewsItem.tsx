@@ -3,16 +3,28 @@ import React from "react";
 import { ThemedText } from "shared/components/ThemedText";
 import { useThemed } from "shared/hooks";
 import { TThemedProps } from "shared/types";
-import { TNewsItem } from "features/news/types";
+import { TNews } from "features/news/types";
+import {
+  scale,
+  scaleFontSize,
+  scaleHeight,
+  scaleWidth,
+} from "utils/scaling/scaling";
 
-const Radius = 10;
-export const NewsItem = (props: TNewsItem & TThemedProps) => {
-  const { description, image, title, dark, light } = props;
+const Radius = scale(10);
+const width = scaleWidth(360);
+const height = scaleHeight(380);
+
+export const NewsItem = (props: TNews & TThemedProps) => {
+  const { description, urlToImage, title, dark, light } = props;
   const themedColor = useThemed({ light, dark }, "secondaryBackGround");
   return (
-    <TouchableOpacity style={[styles.container, { borderColor: themedColor }]}>
+    <TouchableOpacity
+      onPress={() => console.log("hello")}
+      style={[styles.container, { borderColor: themedColor }]}
+    >
       <Image
-        source={{ uri: image }}
+        source={{ uri: urlToImage }}
         resizeMode="cover"
         style={[styles.cover, { backgroundColor: themedColor }]}
       />
@@ -21,7 +33,7 @@ export const NewsItem = (props: TNewsItem & TThemedProps) => {
           {title}
         </ThemedText>
         <ThemedText
-          numberOfLines={2}
+          numberOfLines={3}
           ellipsizeMode="tail"
           style={styles.description}
         >
@@ -34,20 +46,20 @@ export const NewsItem = (props: TNewsItem & TThemedProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 2,
+    borderWidth: scaleWidth(2),
     borderRadius: Radius,
-    width: "100%",
-    height: "40%",
+    width,
+    height,
     alignItems: "flex-start",
-    marginBottom:4
+    marginBottom: scaleHeight(10),
   },
   cover: {
-    width: "100%",
-    height: "70%",
+    width,
+    height: height / 1.4,
     borderTopRightRadius: Radius,
     borderTopLeftRadius: Radius,
   },
-  contentContainer: { alignItems: "flex-start", padding: 10 },
-  title: { fontSize: 15, fontWeight: "600" },
-  description: { fontSize: 12, marginTop: 5 },
+  contentContainer: { alignItems: "flex-start", padding: scale(10) },
+  title: { fontSize: scaleFontSize(15), fontWeight: "600" },
+  description: { fontSize: scaleFontSize(12), marginTop: scaleHeight(5) },
 });

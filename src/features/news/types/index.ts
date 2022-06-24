@@ -1,1 +1,1 @@
-export type {TNewsItem} from './TNewsItem.type'
+export type { TNews } from "./TNews.type";

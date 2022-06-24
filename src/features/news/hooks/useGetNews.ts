@@ -1,4 +1,3 @@
-import { getActionFromState } from "@react-navigation/native";
 import { getAllNewsApi } from "api/getAllNews/getAllNewsApi";
 import { useEffect } from "react";
 import { ENewsState } from "shared/enums";
@@ -18,19 +17,19 @@ export const useGetNews = () => {
           status: ENewsState.failed,
         })
       );
-      if (news)
+    if (news)
       dispatch(
         setNews({
-          news,
+          news: news?.articles || [],
           status: ENewsState.done,
         })
       );
   };
-  useEffect(()=>{getNews()},[])
+  useEffect(() => {
+    getNews();
+  }, []);
   return {
     data,
-    getNews
-}
-
+    getNews,
+  };
 };
-
