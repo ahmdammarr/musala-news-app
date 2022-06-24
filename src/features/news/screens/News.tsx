@@ -10,11 +10,25 @@ import { ErrorAnimated } from "shared/components/ErrorAnimated";
 
 export const News = () => {
   const [offSetPage, setOffSetPage] = useState(0);
-  const { data } = useGetNews(offSetPage);
+  const [isLoadingMore, setisLoadingMore] = useState(false);
+  const { data, fetchMoreNews } = useGetNews();
+  const onLoadMore = () => {
+    console.log('offSet', offSetPage)
+    setisLoadingMore(true)
+    setOffSetPage(offSetPage + 1);
+    fetchMoreNews(offSetPage).then(()=> setisLoadingMore(false))
+  };
+
   const screenContent = {
-    [ENewsState.loading]: <Loader style={styles.status}/>,
-    [ENewsState.failed]: <ErrorAnimated style={styles.status}/>,
-    [ENewsState.done]: <NewList data={data.news.news} />,
+    [ENewsState.loading]: <Loader style={styles.status} />,
+    [ENewsState.failed]: <ErrorAnimated style={styles.status} />,
+    [ENewsState.done]: (
+      <NewList
+        data={data.news.news}
+        onLoadMore={onLoadMore}
+        refreshing={isLoadingMore}
+      />
+    ),
   };
 
   return (
@@ -30,8 +44,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  status:{
+  status: {
     height: scaleHeight(125),
-    width: scaleWidth(150)
-  }
+    width: scaleWidth(150),
+  },
 });

@@ -5,6 +5,7 @@ import { useAppSelector } from "store/hooks";
 
 const initialState: TNewsState = {
     news: [],
+    page:0,
     status: ENewsState.loading,
 };
 
