@@ -3,7 +3,7 @@ import React from "react";
 import { ThemedText } from "shared/components/ThemedText";
 import { useThemed } from "shared/hooks";
 import { TThemedProps } from "shared/types";
-import { TNews } from "features/news/types";
+import { INewsNavigate, TNews } from "features/news/types";
 import {
   scale,
   scaleFontSize,
@@ -11,6 +11,8 @@ import {
   scaleWidth,
 } from "utils/scaling/scaling";
 import { images } from "assets/images";
+import { useNavigation } from "@react-navigation/native";
+import { ENewsRoutes } from "shared/enums/ERoutes.enum";
 
 const Radius = scale(10);
 const width = scaleWidth(360);
@@ -19,10 +21,12 @@ const height = scaleHeight(380);
 export const NewsItem = (props: TNews & TThemedProps) => {
   const { description, image, title, dark, light } = props;
   const themedColor = useThemed({ light, dark }, "secondaryBackGround");
-   const imagesSource = image?{ uri: image }: images.defaultImage
+  const imagesSource = image ? { uri: image } : images.defaultImage;
+  const { navigate } = useNavigation<INewsNavigate["navigation"]>();
+  const onArticlePressed = () => navigate(ENewsRoutes.article, props);
   return (
     <TouchableOpacity
-      onPress={() => console.log("hello")}
+      onPress={onArticlePressed}
       style={[styles.container, { borderColor: themedColor }]}
     >
       <Image

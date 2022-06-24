@@ -11,7 +11,9 @@ const en = {
     }
   },
   news:{
-    search:'Search News'
+    search:'Search News',
+    fullArticle:'Full Article',
+    clickHere:'Click here'
   }
 };
 

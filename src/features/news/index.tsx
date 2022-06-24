@@ -6,6 +6,7 @@ import {
 import { News } from "./screens";
 import { TNewsRoutes } from "shared/types/TNewsRoutes.type";
 import { ENewsRoutes } from "shared/enums/ERoutes.enum";
+import { Article } from "./screens/Article";
 
 export const NewsStack = createStackNavigator<TNewsRoutes>();
 export const NewsStackScreens = () => (
@@ -17,5 +18,6 @@ export const NewsStackScreens = () => (
     }}
   >
     <NewsStack.Screen name={ENewsRoutes.news} component={News} />
+    <NewsStack.Screen name={ENewsRoutes.article} component={Article} />
   </NewsStack.Navigator>
 );
