@@ -11,4 +11,8 @@ export const colors = {
     tabIcon: "#6c757d",
     secondaryBackGround:'#212529',
   },
+
+  shared:{
+    brand:'#357ded'
+  }
 };

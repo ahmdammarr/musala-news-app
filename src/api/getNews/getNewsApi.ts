@@ -16,8 +16,9 @@ const _params = {
 
 export const getNewsApi = async (offset: number) => {
   const params = { ..._params, offset };
-  const [error, response] = await to(axios.get(baseURI, { params }));
-  return { error, news: response?.data?.data };
+  // const [error, response] = await to(axios.get(baseURI, { params }));
+  // return { error, news: response?.data?.data };
+  return { error:'', news: [] };
 };
 
 export const getSearchNewsApi = async (offset: number, keyword?: string) => {
@@ -26,6 +27,7 @@ export const getSearchNewsApi = async (offset: number, keyword?: string) => {
     offset,
     keywords: keyword || "",
   };
-  const [error, response] = await to(axios.get(baseURI, { params }));
-  return { error, searchNews: response?.data?.data };
+  // const [error, response] = await to(axios.get(baseURI, { params }));
+  // return { error, searchNews: response?.data?.data };
+  return { error:'', searchNews: [] };
 };
