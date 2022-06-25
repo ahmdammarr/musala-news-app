@@ -13,14 +13,17 @@ import { useGetSearchNews } from "../hooks/useGetSearchNews";
 
 export const News = () => {
   const [offSetPage, setOffSetPage] = useState(0);
-  const [offSetPageSearch, setOffSetPageSearch] = useState(0);
   const [isLoadingMore, setisLoadingMore] = useState(false);
+
+  const [offSetPageSearch, setOffSetPageSearch] = useState(0);
   const [isLoadingMoreSearch, setisLoadingMoreSearch] = useState(false);
+
   const { top } = useSafeAreaInsets();
   const [searchInput, setSearchInput] = useState("");
+
   const { data, fetchMoreNews, getNews } = useGetNews();
-  const { searchData, getSearchNews, fetchMoreSearchNews, setSearchLoading } =
-    useGetSearchNews();
+  const { searchData, getSearchNews, fetchMoreSearchNews } = useGetSearchNews();
+  
   const onLoadMore = () => {
     setisLoadingMore(true);
     setOffSetPage(offSetPage + 1);
@@ -38,10 +41,7 @@ export const News = () => {
 
   useEffect(() => {
     if (searchInput) {
-      //   setSearchLoading()
-      console.log("hello", searchInput.length, searchData?.searchNews?.status);
       getSearchNews(searchInput);
-      //  getSearchNews(searchInput)
     } else getNews();
   }, [searchInput]);
 

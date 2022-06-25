@@ -50,19 +50,10 @@ export const useGetSearchNews = () => {
         })
       );
   };
-  const setSearchLoading = () => {
-    dispatch(
-      setSearchNews({
-        searchNews: [],
-        page: 0,
-        status: ENewsState.loading,
-      })
-    );
-  };
+
   return {
     searchData,
     getSearchNews,
-    fetchMoreSearchNews,
-    setSearchLoading,
+    fetchMoreSearchNews
   };
 };
