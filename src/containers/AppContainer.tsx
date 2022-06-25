@@ -6,9 +6,9 @@ import { useCashedResources } from "shared/hooks";
 import { Splash } from "features/splash/screens/splash";
 
 export const AppContainer = () => {
-  const { isLoading } = useCashedResources();
+  const { isLoading, IsSplashOn } = useCashedResources();
 
-  if (true) return <Splash />;
+  if (IsSplashOn) return <Splash />;
 
   if (isLoading)
     return (
