@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Hello App Display Name</string>
+	<string>NewsApp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,15 +30,15 @@
 		<dict>
 			<key>api.mediastack.com</key>
 			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<key>NSAllowsArbitraryLoads</key>
 				<true/>
-				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
-				<key>NSAllowsArbitraryLoads</key>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
 				<true/>
 			</dict>
 			<key>localhost</key>
