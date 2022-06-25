@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2CEE68AED0E042F709E1D57F /* libPods-WorldNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA292AEF3EEBD7E2CA09A05 /* libPods-WorldNews.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8746E65FB8C14378EA45C52D /* libPods-WorldNews-WorldNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4108AB90C3738C80C93569 /* libPods-WorldNews-WorldNewsTests.a */; };
+		92A379B880FA493248A7ADF8 /* libPods-WorldNews-WorldNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B9FC440E4985C79E84F6C7 /* libPods-WorldNews-WorldNewsTests.a */; };
+		D7B214C7833E6ED97B39D3D2 /* libPods-WorldNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D826CB1D192D7CDEA473C5 /* libPods-WorldNews.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* WorldNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WorldNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldNewsTests.m; sourceTree = "<group>"; };
+		11D826CB1D192D7CDEA473C5 /* libPods-WorldNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* WorldNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WorldNews/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WorldNews/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WorldNews/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WorldNews/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WorldNews/main.m; sourceTree = "<group>"; };
-		2FA292AEF3EEBD7E2CA09A05 /* libPods-WorldNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D4108AB90C3738C80C93569 /* libPods-WorldNews-WorldNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldNews-WorldNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B9FC440E4985C79E84F6C7 /* libPods-WorldNews-WorldNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorldNews-WorldNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		677A931E2C5F9EA33D36C897 /* Pods-WorldNews-WorldNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews-WorldNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WorldNews/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9BD7A7A7D01E494BD6E6E3B3 /* Pods-WorldNews-WorldNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews-WorldNewsTests.release.xcconfig"; path = "Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests.release.xcconfig"; sourceTree = "<group>"; };
-		A7FC5BC44F4451498FA2E644 /* Pods-WorldNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews.release.xcconfig"; path = "Target Support Files/Pods-WorldNews/Pods-WorldNews.release.xcconfig"; sourceTree = "<group>"; };
-		D288DA9D88DC757CD0469F61 /* Pods-WorldNews-WorldNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews-WorldNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A92EC249CB9213C13F8C6880 /* Pods-WorldNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews.release.xcconfig"; path = "Target Support Files/Pods-WorldNews/Pods-WorldNews.release.xcconfig"; sourceTree = "<group>"; };
+		D52C68E7896B3DCF43527FC1 /* Pods-WorldNews-WorldNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews-WorldNewsTests.release.xcconfig"; path = "Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FA5E0E7D6A145D76533BB63C /* Pods-WorldNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews.debug.xcconfig"; path = "Target Support Files/Pods-WorldNews/Pods-WorldNews.debug.xcconfig"; sourceTree = "<group>"; };
+		F1C80FE2FD0C812C9D6EA21D /* Pods-WorldNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldNews.debug.xcconfig"; path = "Target Support Files/Pods-WorldNews/Pods-WorldNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8746E65FB8C14378EA45C52D /* libPods-WorldNews-WorldNewsTests.a in Frameworks */,
+				92A379B880FA493248A7ADF8 /* libPods-WorldNews-WorldNewsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CEE68AED0E042F709E1D57F /* libPods-WorldNews.a in Frameworks */,
+				D7B214C7833E6ED97B39D3D2 /* libPods-WorldNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				2FA292AEF3EEBD7E2CA09A05 /* libPods-WorldNews.a */,
-				3D4108AB90C3738C80C93569 /* libPods-WorldNews-WorldNewsTests.a */,
+				11D826CB1D192D7CDEA473C5 /* libPods-WorldNews.a */,
+				17B9FC440E4985C79E84F6C7 /* libPods-WorldNews-WorldNewsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FA5E0E7D6A145D76533BB63C /* Pods-WorldNews.debug.xcconfig */,
-				A7FC5BC44F4451498FA2E644 /* Pods-WorldNews.release.xcconfig */,
-				D288DA9D88DC757CD0469F61 /* Pods-WorldNews-WorldNewsTests.debug.xcconfig */,
-				9BD7A7A7D01E494BD6E6E3B3 /* Pods-WorldNews-WorldNewsTests.release.xcconfig */,
+				F1C80FE2FD0C812C9D6EA21D /* Pods-WorldNews.debug.xcconfig */,
+				A92EC249CB9213C13F8C6880 /* Pods-WorldNews.release.xcconfig */,
+				677A931E2C5F9EA33D36C897 /* Pods-WorldNews-WorldNewsTests.debug.xcconfig */,
+				D52C68E7896B3DCF43527FC1 /* Pods-WorldNews-WorldNewsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WorldNewsTests" */;
 			buildPhases = (
-				15BC9B043B58C3845F07CC82 /* [CP] Check Pods Manifest.lock */,
+				4F9270E51552C8D90871CA9B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				138AAC5307A5526A47684B3E /* [CP] Embed Pods Frameworks */,
-				DEA6E3AEDAC43F61302D5A90 /* [CP] Copy Pods Resources */,
+				D97A87F41DF95272365F4E7E /* [CP] Embed Pods Frameworks */,
+				DC2E5088B9F3E2BF7A478DF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WorldNews" */;
 			buildPhases = (
-				0770098404AA9EA5843B83D6 /* [CP] Check Pods Manifest.lock */,
+				8A338AA9A2783E3AB2BE03B1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				4C9506E3A80BE309A3725DDE /* [CP] Embed Pods Frameworks */,
-				DD6E4978B287147C2AA6C87A /* [CP] Copy Pods Resources */,
+				11BD436B361DB1D85BDDE168 /* [CP] Embed Pods Frameworks */,
+				81BA88D137B07746EF6ED7F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,46 +264,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0770098404AA9EA5843B83D6 /* [CP] Check Pods Manifest.lock */ = {
+		11BD436B361DB1D85BDDE168 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WorldNews-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		138AAC5307A5526A47684B3E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		15BC9B043B58C3845F07CC82 /* [CP] Check Pods Manifest.lock */ = {
+		4F9270E51552C8D90871CA9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,24 +303,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4C9506E3A80BE309A3725DDE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD6E4978B287147C2AA6C87A /* [CP] Copy Pods Resources */ = {
+		81BA88D137B07746EF6ED7F7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,7 +320,46 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldNews/Pods-WorldNews-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEA6E3AEDAC43F61302D5A90 /* [CP] Copy Pods Resources */ = {
+		8A338AA9A2783E3AB2BE03B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorldNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D97A87F41DF95272365F4E7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldNews-WorldNewsTests/Pods-WorldNews-WorldNewsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2E5088B9F3E2BF7A478DF1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D288DA9D88DC757CD0469F61 /* Pods-WorldNews-WorldNewsTests.debug.xcconfig */;
+			baseConfigurationReference = 677A931E2C5F9EA33D36C897 /* Pods-WorldNews-WorldNewsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD7A7A7D01E494BD6E6E3B3 /* Pods-WorldNews-WorldNewsTests.release.xcconfig */;
+			baseConfigurationReference = D52C68E7896B3DCF43527FC1 /* Pods-WorldNews-WorldNewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA5E0E7D6A145D76533BB63C /* Pods-WorldNews.debug.xcconfig */;
+			baseConfigurationReference = F1C80FE2FD0C812C9D6EA21D /* Pods-WorldNews.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -504,7 +504,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7FC5BC44F4451498FA2E644 /* Pods-WorldNews.release.xcconfig */;
+			baseConfigurationReference = A92EC249CB9213C13F8C6880 /* Pods-WorldNews.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
