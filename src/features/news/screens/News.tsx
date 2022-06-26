@@ -10,6 +10,12 @@ import { ErrorAnimated } from "shared/components/ErrorAnimated";
 import { SearchInput } from "../components/searchInput/SearchInput";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useGetSearchNews } from "../hooks/useGetSearchNews";
+import dynamicLinks, {
+  FirebaseDynamicLinksTypes,
+} from "@react-native-firebase/dynamic-links";
+import { useNavigation } from "@react-navigation/native";
+import { INewsNavigate } from "../types";
+import { ENewsRoutes } from "shared/enums/ERoutes.enum";
 
 export const News = () => {
   const [offSetPage, setOffSetPage] = useState(0);
@@ -22,12 +28,42 @@ export const News = () => {
   const [searchInput, setSearchInput] = useState("");
 
   const { data, fetchMoreNews, getNews } = useGetNews();
+  const { navigate } = useNavigation<INewsNavigate["navigation"]>();
   const { searchData, getSearchNews, fetchMoreSearchNews } = useGetSearchNews();
-  
   const onLoadMore = () => {
     setisLoadingMore(true);
     setOffSetPage(offSetPage + 1);
     fetchMoreNews(offSetPage).then(() => setisLoadingMore(false));
+  };
+
+  useEffect(() => {
+    dynamicLinks()
+      .getInitialLink()
+      .then((link) => {
+        handleDynamicLink(link);
+      });
+    const linkingListener = dynamicLinks().onLink(handleDynamicLink);
+    return () => {
+      linkingListener();
+    };
+  }, []);
+
+  const handleDynamicLink = (
+    link: FirebaseDynamicLinksTypes.DynamicLink | null
+  ) => {
+    if (!!link?.url) {
+      let getparams = link.url?.split("/");
+      setTimeout(() => {
+        navigate(ENewsRoutes.article, {
+          author: getparams[0],
+          description: getparams[1],
+          image: getparams[2],
+          published_at: getparams[3],
+          title: getparams[4],
+          url: getparams[5],
+        });
+      }, 1000);
+    }
   };
 
   const onLoadMoreSearch = () => {
