@@ -17,6 +17,8 @@
     "@react-navigation/stack": "^6.2.1",
     "@reduxjs/toolkit": "^1.8.2",
     "@types/react-native-dotenv": "^0.2.0",
+    "@react-native-firebase/app": "^15.0.0",
+    "@react-native-firebase/dynamic-links": "^15.0.0",
     "await-to-js": "^3.0.0",
     "axios": "^0.27.2",
     "date-fns": "^2.28.0",

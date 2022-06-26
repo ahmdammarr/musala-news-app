@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useThemed } from "shared/hooks";
 import { TThemedProps } from "shared/types";
@@ -22,6 +22,7 @@ export const BottomTabNavigator = ({ light, dark }: TThemedProps) => {
     tabBarActiveTintColor: iconBackgroundColor,
   };
 
+  
   return (
     <BottomTab.Navigator screenOptions={screenOptions}>
       <BottomTab.Screen
