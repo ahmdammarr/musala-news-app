@@ -16,6 +16,7 @@ import dynamicLinks, {
 import { useNavigation } from "@react-navigation/native";
 import { INewsNavigate } from "../types";
 import { ENewsRoutes } from "shared/enums/ERoutes.enum";
+import { useDynamicLinks } from "../hooks/useDynamikLinks";
 
 export const News = () => {
   const [offSetPage, setOffSetPage] = useState(0);
@@ -28,7 +29,7 @@ export const News = () => {
   const [searchInput, setSearchInput] = useState("");
 
   const { data, fetchMoreNews, getNews } = useGetNews();
-  const { navigate } = useNavigation<INewsNavigate["navigation"]>();
+ const {handleDynamicLink} = useDynamicLinks()
   const { searchData, getSearchNews, fetchMoreSearchNews } = useGetSearchNews();
   const onLoadMore = () => {
     setisLoadingMore(true);
@@ -47,24 +48,6 @@ export const News = () => {
       linkingListener();
     };
   }, []);
-
-  const handleDynamicLink = (
-    link: FirebaseDynamicLinksTypes.DynamicLink | null
-  ) => {
-    if (!!link?.url) {
-      let getparams = link.url?.split("/");
-      setTimeout(() => {
-        navigate(ENewsRoutes.article, {
-          author: getparams[0],
-          description: getparams[1],
-          image: getparams[2],
-          published_at: getparams[3],
-          title: getparams[4],
-          url: getparams[5],
-        });
-      }, 1000);
-    }
-  };
 
   const onLoadMoreSearch = () => {
     console.log("offSet", offSetPageSearch);
